@@ -7,12 +7,13 @@ import javax.persistence.criteria.CriteriaBuilder;
 public class OrderItem {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
     @Column(name = "order_id")
     private Integer order_id;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name = "product_id")
     private Integer product_id;
     @Column(name = "count")

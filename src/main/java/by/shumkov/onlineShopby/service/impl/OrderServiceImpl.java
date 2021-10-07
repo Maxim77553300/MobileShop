@@ -20,6 +20,7 @@ public class OrderServiceImpl implements OrderService {
 
     private OrderRepository orderRepository;
 
+
     @Autowired
     public OrderServiceImpl(OrderRepository orderRepository) {
         this.orderRepository = orderRepository;
@@ -37,7 +38,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order addNewOrder(Order order) throws OrderServiceException{
+
         Optional<Order> findById = orderRepository.findById(order.getId());
+
         if(findById.isPresent()){
             throw new OrderServiceException("!!! This order is already exist!! You can add goods to your order");
         } else {
