@@ -42,7 +42,7 @@ public class OrderServiceImpl implements OrderService {
         Optional<Order> findById = orderRepository.findById(order.getId());
 
         if(findById.isPresent()){
-            throw new OrderServiceException("!!! This order is already exist!! You can add goods to your order");
+            throw new OrderServiceException("!!! This order is already exists!! You can add goods to your order");
         } else {
             return orderRepository.save(order);
         }
