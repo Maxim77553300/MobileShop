@@ -1,21 +1,18 @@
 package by.shumkov.onlineShopby.entity;
 
+import by.shumkov.onlineShopby.repository.LabelRepositoryKey;
+
 import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 
-@Entity
-public class OrderItem {
+@Entity @IdClass(LabelRepositoryKey.class)
+public class OrderProduct {
 
     @Id
-    @Column(name = "id")
-    private Integer id;
-
-    @Column(name = "order_id")
     private Integer order_id;
-
-
-    @Column(name = "product_id")
+    @Id
     private Integer product_id;
+
     @Column(name = "count")
     private Integer count;
     @Column(name = "price")

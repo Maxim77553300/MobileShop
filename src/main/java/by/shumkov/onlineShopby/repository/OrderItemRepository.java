@@ -1,12 +1,11 @@
 package by.shumkov.onlineShopby.repository;
 
-import by.shumkov.onlineShopby.entity.Order;
-import by.shumkov.onlineShopby.entity.OrderItem;
+import by.shumkov.onlineShopby.entity.OrderProduct;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface OrderItemRepository extends JpaRepository<OrderItem,Integer> {
+public interface OrderItemRepository extends JpaRepository<OrderProduct,Integer> {
 
-    Optional<OrderItem> findById(Integer id);
+    Optional<OrderProduct> findById(Integer id);
 }
