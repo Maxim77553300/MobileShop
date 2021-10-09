@@ -1,0 +1,11 @@
+//package by.shumkov.onlineShopby.repository;
+//
+//import by.shumkov.onlineShopby.entity.OrderProduct;
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//import java.util.Optional;
+//
+//public interface OrderProductRepository extends JpaRepository<OrderProduct,Integer> {
+//
+//    Optional<OrderProduct> findById(Integer id);
+//}
